@@ -76,8 +76,8 @@ jobs:
           -DCREATE_PACKAGE=ON                     \
           -DCMAKE_C_COMPILER_LAUNCHER=ccache      \
           -DCMAKE_CXX_COMPILER_LAUNCHER=ccache    \
-          -DCMAKE_C_FLAGS="-O3 -march=znver3 -lto -fuse-ld=lld"          \
-          -DCMAKE_CXX_FLAGS="-O3 -march=znver3 -lto -fuse-ld=lld"        \
+          -DCMAKE_C_FLAGS="-O3 -march=znver3 -flto -fuse-ld=lld"          \
+          -DCMAKE_CXX_FLAGS="-O3 -march=znver3 -flto -fuse-ld=lld"        \
           -DIMHEX_PATTERNS_PULL_MASTER=ON         \
           ..
         mingw32-make -j4 install
